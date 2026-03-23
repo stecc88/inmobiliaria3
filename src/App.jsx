@@ -11,6 +11,7 @@ import Dashboard from './pages/admin/Dashboard';
 import PropertyForm from './pages/admin/PropertyForm';
 import Inquiries from './pages/admin/Inquiries';
 import Settings from './pages/admin/Settings';
+import { Navigate } from 'react-router-dom';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         <Route path="/admin/editar/:id" element={<AdminRoute><PropertyForm /></AdminRoute>} />
         <Route path="/admin/consultas" element={<AdminRoute><Inquiries /></AdminRoute>} />
         <Route path="/admin/ajustes" element={<AdminRoute><Settings /></AdminRoute>} />
+
+        {/* Redirección por defecto */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );

@@ -182,7 +182,7 @@ const PropertyForm = () => {
                   value={formData.title}
                   onChange={handleInputChange}
                   placeholder="Ej: Hermosa Casa Quinta con Pileta"
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 />
               </div>
 
@@ -192,7 +192,7 @@ const PropertyForm = () => {
                   name="type"
                   value={formData.type}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 >
                   <option value="casa">Casa</option>
                   <option value="departamento">Departamento</option>
@@ -206,7 +206,7 @@ const PropertyForm = () => {
                   name="operation"
                   value={formData.operation}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 >
                   <option value="venta">Venta</option>
                   <option value="alquiler">Alquiler</option>
@@ -219,7 +219,7 @@ const PropertyForm = () => {
                   name="status"
                   value={formData.status}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 >
                   <option value="disponible">Disponible</option>
                   <option value="reservado">Reservado</option>
@@ -236,7 +236,7 @@ const PropertyForm = () => {
                   value={formData.rooms}
                   onChange={handleInputChange}
                   placeholder="Ej: 3"
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 />
               </div>
 
@@ -248,7 +248,7 @@ const PropertyForm = () => {
                   value={formData.age}
                   onChange={handleInputChange}
                   placeholder="Ej: 5"
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 />
               </div>
 
@@ -262,7 +262,7 @@ const PropertyForm = () => {
                     value={formData.province}
                     onChange={handleInputChange}
                     placeholder="Ej: Buenos Aires"
-                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
                 <div>
@@ -274,7 +274,7 @@ const PropertyForm = () => {
                     value={formData.city}
                     onChange={handleInputChange}
                     placeholder="Ej: CABA"
-                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
                 <div>
@@ -285,7 +285,7 @@ const PropertyForm = () => {
                     value={formData.neighborhood}
                     onChange={handleInputChange}
                     placeholder="Ej: Palermo"
-                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
                 <div>
@@ -296,7 +296,7 @@ const PropertyForm = () => {
                     value={formData.address}
                     onChange={handleInputChange}
                     placeholder="Ej: Av. Santa Fe 1234"
-                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
               </div>
@@ -309,7 +309,7 @@ const PropertyForm = () => {
                   value={formData.description}
                   onChange={handleInputChange}
                   placeholder="Describe detalladamente las características del inmueble..."
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 ></textarea>
               </div>
             </div>
@@ -327,7 +327,7 @@ const PropertyForm = () => {
                   name="currency"
                   value={formData.currency}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 >
                   <option value="USD">USD</option>
                   <option value="ARS">ARS</option>
@@ -341,7 +341,7 @@ const PropertyForm = () => {
                   required
                   value={formData.price}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                  className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                 />
               </div>
               <div>
@@ -353,7 +353,7 @@ const PropertyForm = () => {
                     name="area_total"
                     value={formData.area_total}
                     onChange={handleInputChange}
-                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
               </div>
@@ -366,7 +366,7 @@ const PropertyForm = () => {
                     name="area_covered"
                     value={formData.area_covered}
                     onChange={handleInputChange}
-                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
               </div>
@@ -379,7 +379,7 @@ const PropertyForm = () => {
                     name="bedrooms"
                     value={formData.bedrooms}
                     onChange={handleInputChange}
-                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
               </div>
@@ -392,7 +392,7 @@ const PropertyForm = () => {
                     name="bathrooms"
                     value={formData.bathrooms}
                     onChange={handleInputChange}
-                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
               </div>
@@ -404,7 +404,7 @@ const PropertyForm = () => {
                     name="lot_front"
                     value={formData.lot_front}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-3 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
                 <div>
@@ -414,7 +414,7 @@ const PropertyForm = () => {
                     name="lot_depth"
                     value={formData.lot_depth}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-3 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
                 <div>
@@ -425,7 +425,7 @@ const PropertyForm = () => {
                     value={formData.lot_dimensions_text}
                     onChange={handleInputChange}
                     placeholder="10x30"
-                    className="w-full px-3 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-3 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
               </div>
@@ -438,7 +438,7 @@ const PropertyForm = () => {
                     name="garage"
                     value={formData.garage}
                     onChange={handleInputChange}
-                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
               </div>
@@ -618,7 +618,7 @@ const PropertyForm = () => {
                     value={formData.video_url}
                     onChange={handleInputChange}
                     placeholder="https://youtube.com/watch?v=..."
-                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
                   />
                 </div>
               </div>

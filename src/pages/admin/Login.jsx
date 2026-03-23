@@ -20,8 +20,8 @@ const Login = () => {
       await login(email, password);
       navigate('/admin');
     } catch (err) {
-      setError('Credenciales incorrectas o error de conexión');
-      console.error(err);
+      setError(err.message || 'Credenciales incorrectas o error de conexión');
+      console.error('Error de login:', err);
     } finally {
       setLoading(false);
     }
@@ -56,7 +56,7 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="admin@ejemplo.com"
-                className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
               />
             </div>
           </div>
@@ -71,7 +71,7 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-10 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition"
+                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition text-gray-900 bg-white"
               />
             </div>
           </div>

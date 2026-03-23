@@ -115,7 +115,7 @@ const Settings = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                  className="w-full px-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                 />
               </div>
 
@@ -128,7 +128,7 @@ const Settings = () => {
                     name="logo_url"
                     value={formData.logo_url}
                     onChange={handleInputChange}
-                    className="w-full pl-12 pr-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                    className="w-full pl-12 pr-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                   />
                 </div>
               </div>
@@ -140,7 +140,7 @@ const Settings = () => {
                   rows="4"
                   value={formData.general_text_home}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                  className="w-full px-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                 ></textarea>
               </div>
             </div>
@@ -159,7 +159,7 @@ const Settings = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                    className="w-full px-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                   />
                 </div>
                 <div className="space-y-2">
@@ -169,7 +169,7 @@ const Settings = () => {
                     name="whatsapp"
                     value={formData.whatsapp}
                     onChange={handleInputChange}
-                    className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                    className="w-full px-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                   />
                 </div>
               </div>
@@ -183,7 +183,7 @@ const Settings = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full pl-12 pr-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                    className="w-full pl-12 pr-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                   />
                 </div>
               </div>
@@ -197,7 +197,7 @@ const Settings = () => {
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
-                    className="w-full pl-12 pr-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                    className="w-full pl-12 pr-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                   />
                 </div>
               </div>
@@ -219,7 +219,7 @@ const Settings = () => {
                       name="instagram_url"
                       value={formData.instagram_url}
                       onChange={handleInputChange}
-                      className="w-full pl-12 pr-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                      className="w-full pl-12 pr-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                     />
                   </div>
                 </div>
@@ -232,7 +232,7 @@ const Settings = () => {
                       name="facebook_url"
                       value={formData.facebook_url}
                       onChange={handleInputChange}
-                      className="w-full pl-12 pr-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                      className="w-full pl-12 pr-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                     />
                   </div>
                 </div>
@@ -245,7 +245,7 @@ const Settings = () => {
                       name="twitter_url"
                       value={formData.twitter_url}
                       onChange={handleInputChange}
-                      className="w-full pl-12 pr-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-700"
+                      className="w-full pl-12 pr-6 py-4 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary font-bold text-gray-900"
                     />
                   </div>
                 </div>
