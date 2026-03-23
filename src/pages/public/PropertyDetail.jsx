@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import Layout from '../../components/layout/Layout';
+import { useSettings } from '../../hooks/useSettings';
 import { 
   MapPin, BedDouble, Bath, Square, 
   Calendar, Share2, Phone, Mail, 
@@ -14,6 +15,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const PropertyDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { settings } = useSettings();
   const [property, setProperty] = useState(null);
   const [similar, setSimilar] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -92,6 +94,7 @@ const PropertyDetail = () => {
   if (!property) return null;
 
   const whatsappMessage = encodeURIComponent(`Hola, estoy interesado en la propiedad: ${property.title} (${window.location.href})`);
+  const whatsappNumber = settings?.whatsapp?.replace(/\D/g, '') || '5491112345678';
 
   return (
     <Layout>
@@ -316,7 +319,7 @@ const PropertyDetail = () => {
 
                     <div className="space-y-4">
                       <a 
-                        href={`https://wa.me/5491112345678?text=${whatsappMessage}`}
+                        href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
                         target="_blank"
                         rel="noreferrer"
                         className="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-5 rounded-[2rem] font-black uppercase tracking-widest text-xs flex items-center justify-center gap-3 shadow-xl shadow-emerald-950/20 transition-all active:scale-95"

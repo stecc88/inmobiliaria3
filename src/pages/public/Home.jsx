@@ -3,10 +3,12 @@ import { Search, Home as HomeIcon, Key, Building, MapPin, Phone, Mail } from 'lu
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
+import { useSettings } from '../../hooks/useSettings';
 
 const Home = () => {
   const [featured, setFeatured] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { settings } = useSettings();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useState({
     location: '',
@@ -58,8 +60,14 @@ const Home = () => {
             Líderes en el Mercado Inmobiliario
           </span>
           <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tighter drop-shadow-2xl">
-            Encontrá el lugar donde <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">querés vivir.</span>
+            {settings?.welcome_text ? (
+              <span dangerouslySetInnerHTML={{ __html: settings.welcome_text.replace('\n', '<br />') }} />
+            ) : (
+              <>
+                Encontrá el lugar donde <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">querés vivir.</span>
+              </>
+            )}
           </h1>
           
           <form onSubmit={handleSearch} className="bg-white/10 backdrop-blur-2xl p-2 rounded-3xl shadow-2xl flex flex-col md:flex-row gap-2 items-center border border-white/20">

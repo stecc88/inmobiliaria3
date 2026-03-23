@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Layout from '../../components/layout/Layout';
 import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { useSettings } from '../../hooks/useSettings';
 
 const Contact = () => {
+  const { settings } = useSettings();
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
 
   const handleSubmit = (e) => {
@@ -31,21 +33,27 @@ const Contact = () => {
               <div className="space-y-8">
                 <h2 className="text-4xl font-black text-gray-900 tracking-tighter">Información de contacto</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 group hover:bg-primary transition-all duration-500">
-                    <Phone className="text-primary group-hover:text-white mb-6 transition" size={32} />
-                    <p className="text-[10px] font-black text-gray-400 group-hover:text-white/60 uppercase tracking-widest mb-1">Llamanos</p>
-                    <p className="text-lg font-black text-gray-900 group-hover:text-white transition">+54 9 11 1234 5678</p>
-                  </div>
-                  <div className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 group hover:bg-primary transition-all duration-500">
-                    <Mail className="text-primary group-hover:text-white mb-6 transition" size={32} />
-                    <p className="text-[10px] font-black text-gray-400 group-hover:text-white/60 uppercase tracking-widest mb-1">Escribinos</p>
-                    <p className="text-lg font-black text-gray-900 group-hover:text-white transition">info@inmobiliaria.com</p>
-                  </div>
-                  <div className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 group hover:bg-primary transition-all duration-500 sm:col-span-2">
-                    <MapPin className="text-primary group-hover:text-white mb-6 transition" size={32} />
-                    <p className="text-[10px] font-black text-gray-400 group-hover:text-white/60 uppercase tracking-widest mb-1">Visitanos</p>
-                    <p className="text-lg font-black text-gray-900 group-hover:text-white transition">Av. Libertador 1234, CABA, Argentina</p>
-                  </div>
+                  {settings?.phone && (
+                    <div className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 group hover:bg-primary transition-all duration-500">
+                      <Phone className="text-primary group-hover:text-white mb-6 transition" size={32} />
+                      <p className="text-[10px] font-black text-gray-400 group-hover:text-white/60 uppercase tracking-widest mb-1">Llamanos</p>
+                      <p className="text-lg font-black text-gray-900 group-hover:text-white transition">{settings.phone}</p>
+                    </div>
+                  )}
+                  {settings?.email && (
+                    <div className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 group hover:bg-primary transition-all duration-500">
+                      <Mail className="text-primary group-hover:text-white mb-6 transition" size={32} />
+                      <p className="text-[10px] font-black text-gray-400 group-hover:text-white/60 uppercase tracking-widest mb-1">Escribinos</p>
+                      <p className="text-lg font-black text-gray-900 group-hover:text-white transition">{settings.email}</p>
+                    </div>
+                  )}
+                  {settings?.address && (
+                    <div className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 group hover:bg-primary transition-all duration-500 sm:col-span-2">
+                      <MapPin className="text-primary group-hover:text-white mb-6 transition" size={32} />
+                      <p className="text-[10px] font-black text-gray-400 group-hover:text-white/60 uppercase tracking-widest mb-1">Visitanos</p>
+                      <p className="text-lg font-black text-gray-900 group-hover:text-white transition">{settings.address}</p>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -63,12 +71,16 @@ const Contact = () => {
               <div className="space-y-6">
                 <h3 className="text-xl font-black text-gray-900 tracking-tighter uppercase">Nuestras redes</h3>
                 <div className="flex gap-4">
-                  <a href="#" className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-900 hover:bg-primary hover:text-white transition shadow-sm">
-                    <FaInstagram size={24} />
-                  </a>
-                  <a href="#" className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-900 hover:bg-primary hover:text-white transition shadow-sm">
-                    <FaFacebook size={24} />
-                  </a>
+                  {settings?.instagram_url && (
+                    <a href={settings.instagram_url} target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-900 hover:bg-primary hover:text-white transition shadow-sm">
+                      <FaInstagram size={24} />
+                    </a>
+                  )}
+                  {settings?.facebook_url && (
+                    <a href={settings.facebook_url} target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-900 hover:bg-primary hover:text-white transition shadow-sm">
+                      <FaFacebook size={24} />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
